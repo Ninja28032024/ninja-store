@@ -45,7 +45,7 @@ function App() {
   }
 
   return (
-    <Router>
+    <Router basename="/ninja-store">
       <Header user={user} />
       <Routes>
         <Route path="/" element={<Home />} />
