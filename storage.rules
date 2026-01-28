@@ -1,0 +1,18 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    // Products images - public read, admin write
+    match /products/images/{imageId} {
+      allow read: if true;
+      allow write: if request.auth != null && 
+                     firestore.get(/databases/(default)/documents/users/$(request.auth.uid)).data.isAdmin == true;
+    }
+    
+    // Products files - authenticated users can read if they have an approved order
+    match /products/files/{fileId} {
+      allow read: if request.auth != null;
+      allow write: if request.auth != null && 
+                     firestore.get(/databases/(default)/documents/users/$(request.auth.uid)).data.isAdmin == true;
+    }
+  }
+}
