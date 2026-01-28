@@ -43,17 +43,17 @@
 }
 
 .order-card {
-  background: rgba(20, 20, 20, 0.8);
+  background: var(--bg-secondary);
   border-radius: 16px;
   padding: 32px;
-  border: 1px solid rgba(255, 0, 255, 0.2);
+  border: 1px solid var(--border-subtle);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
   transition: all 0.3s ease;
 }
 
 .order-card:hover {
-  border-color: var(--neon-pink);
-  box-shadow: 0 8px 40px rgba(255, 0, 255, 0.3);
+  border-color: var(--border-medium);
+  box-shadow: 0 8px 30px rgba(255, 110, 199, 0.2);
 }
 
 .order-header {
@@ -62,7 +62,7 @@
   align-items: start;
   margin-bottom: 24px;
   padding-bottom: 24px;
-  border-bottom: 1px solid rgba(255, 0, 255, 0.1);
+  border-bottom: 1px solid var(--border-subtle);
 }
 
 .order-info h3 {
@@ -93,9 +93,9 @@
 }
 
 .status-approved {
-  background: rgba(57, 255, 20, 0.2);
+  background: rgba(127, 255, 0, 0.2);
   color: var(--neon-lime);
-  border: 1px solid rgba(57, 255, 20, 0.4);
+  border: 1px solid rgba(127, 255, 0, 0.4);
 }
 
 .status-rejected {
@@ -115,7 +115,7 @@
   font-size: 36px;
   font-weight: 900;
   color: var(--neon-lime);
-  text-shadow: 0 0 15px rgba(57, 255, 20, 0.5);
+  text-shadow: 0 0 12px rgba(127, 255, 0, 0.3);
 }
 
 .btn-download {

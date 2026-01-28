@@ -11,11 +11,11 @@
 }
 
 .product-form {
-  background: rgba(20, 20, 20, 0.8);
+  background: var(--bg-secondary);
   border-radius: 16px;
   padding: 40px;
   margin-bottom: 60px;
-  border: 1px solid rgba(255, 0, 255, 0.2);
+  border: 1px solid var(--border-subtle);
 }
 
 .product-form h2 {
@@ -46,7 +46,7 @@
   width: 100%;
   padding: 14px 16px;
   background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 0, 255, 0.2);
+  border: 1px solid var(--border-subtle);
   border-radius: 8px;
   color: var(--text-primary);
   font-size: 16px;
@@ -58,7 +58,7 @@
 .form-group textarea:focus {
   outline: none;
   border-color: var(--neon-cyan);
-  box-shadow: 0 0 20px rgba(0, 243, 255, 0.3);
+  box-shadow: 0 0 15px rgba(0, 217, 255, 0.2);
 }
 
 .form-group.checkbox {
@@ -87,10 +87,10 @@
 }
 
 .products-table {
-  background: rgba(20, 20, 20, 0.8);
+  background: var(--bg-secondary);
   border-radius: 16px;
   padding: 40px;
-  border: 1px solid rgba(255, 0, 255, 0.2);
+  border: 1px solid var(--border-subtle);
 }
 
 .products-table h2 {
@@ -106,7 +106,7 @@ table {
 }
 
 thead tr {
-  border-bottom: 2px solid rgba(255, 0, 255, 0.3);
+  border-bottom: 2px solid var(--border-medium);
 }
 
 th {
@@ -121,7 +121,7 @@ th {
 
 td {
   padding: 20px 16px;
-  border-bottom: 1px solid rgba(255, 0, 255, 0.1);
+  border-bottom: 1px solid var(--border-subtle);
   color: var(--text-primary);
 }
 
@@ -134,7 +134,7 @@ td {
 }
 
 .status.active {
-  background: rgba(57, 255, 20, 0.2);
+  background: rgba(127, 255, 0, 0.2);
   color: var(--neon-lime);
 }
 
@@ -159,7 +159,7 @@ td {
 }
 
 .btn-edit {
-  background: rgba(0, 243, 255, 0.2);
+  background: rgba(0, 217, 255, 0.15);
   color: var(--neon-cyan);
   border: 1px solid var(--neon-cyan);
 }
@@ -167,11 +167,11 @@ td {
 .btn-edit:hover {
   background: var(--neon-cyan);
   color: var(--bg-primary);
-  box-shadow: 0 0 20px rgba(0, 243, 255, 0.5);
+  box-shadow: 0 0 15px rgba(0, 217, 255, 0.3);
 }
 
 .btn-delete {
-  background: rgba(255, 68, 68, 0.2);
+  background: rgba(255, 68, 68, 0.15);
   color: #ff4444;
   border: 1px solid #ff4444;
 }
@@ -179,7 +179,7 @@ td {
 .btn-delete:hover {
   background: #ff4444;
   color: white;
-  box-shadow: 0 0 20px rgba(255, 68, 68, 0.5);
+  box-shadow: 0 0 15px rgba(255, 68, 68, 0.3);
 }
 
 @media (max-width: 768px) {
