@@ -8,7 +8,7 @@
   font-weight: 900;
   text-align: center;
   margin-bottom: 60px;
-  background: linear-gradient(135deg, var(--neon-pink), var(--neon-cyan));
+  background: linear-gradient(135deg, var(--primary-green), var(--primary-cyan));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -25,7 +25,7 @@
 
 .no-orders i {
   font-size: 80px;
-  color: var(--neon-cyan);
+  color: var(--primary-cyan);
   opacity: 0.5;
 }
 
@@ -53,7 +53,7 @@
 
 .order-card:hover {
   border-color: var(--border-medium);
-  box-shadow: 0 8px 30px rgba(255, 110, 199, 0.2);
+  box-shadow: 0 8px 30px rgba(0, 255, 136, 0.2);
 }
 
 .order-header {
@@ -94,7 +94,7 @@
 
 .status-approved {
   background: rgba(127, 255, 0, 0.2);
-  color: var(--neon-lime);
+  color: var(--accent-lime);
   border: 1px solid rgba(127, 255, 0, 0.4);
 }
 
@@ -114,7 +114,7 @@
 .order-price {
   font-size: 36px;
   font-weight: 900;
-  color: var(--neon-lime);
+  color: var(--accent-lime);
   text-shadow: 0 0 12px rgba(127, 255, 0, 0.3);
 }
 

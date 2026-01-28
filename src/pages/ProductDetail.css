@@ -16,7 +16,7 @@
   border-radius: 16px;
   overflow: hidden;
   border: 1px solid var(--border-subtle);
-  box-shadow: 0 8px 40px rgba(255, 110, 199, 0.15);
+  box-shadow: 0 8px 40px rgba(0, 255, 136, 0.15);
   background: var(--bg-secondary);
 }
 
@@ -35,7 +35,7 @@
 .product-detail-title {
   font-size: 48px;
   font-weight: 900;
-  background: linear-gradient(135deg, var(--neon-pink), var(--neon-cyan));
+  background: linear-gradient(135deg, var(--primary-green), var(--primary-cyan));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -51,7 +51,7 @@
 .product-detail-price {
   font-size: 56px;
   font-weight: 900;
-  color: var(--neon-lime);
+  color: var(--accent-lime);
   text-shadow: 0 0 15px rgba(127, 255, 0, 0.3);
   margin: 20px 0;
 }
@@ -85,7 +85,7 @@
 
 .feature i {
   font-size: 32px;
-  color: var(--neon-cyan);
+  color: var(--primary-cyan);
 }
 
 .feature span {

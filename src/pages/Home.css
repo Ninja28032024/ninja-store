@@ -12,11 +12,11 @@
   font-size: clamp(36px, 6vw, 56px);
   font-weight: 900;
   margin-bottom: 60px;
-  background: linear-gradient(135deg, var(--neon-pink), var(--neon-cyan));
+  background: linear-gradient(135deg, var(--primary-green), var(--primary-cyan));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  filter: drop-shadow(0 0 15px rgba(255, 110, 199, 0.2));
+  filter: drop-shadow(0 0 15px rgba(0, 255, 136, 0.2));
 }
 
 .products-grid {

@@ -22,7 +22,7 @@
   font-size: 28px;
   font-weight: 700;
   margin-bottom: 32px;
-  color: var(--neon-cyan);
+  color: var(--primary-cyan);
 }
 
 .form-group {
@@ -57,7 +57,7 @@
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: var(--neon-cyan);
+  border-color: var(--primary-cyan);
   box-shadow: 0 0 15px rgba(0, 217, 255, 0.2);
 }
 
@@ -83,7 +83,7 @@
 .file-info {
   margin-top: 8px;
   font-size: 12px;
-  color: var(--neon-lime);
+  color: var(--accent-lime);
 }
 
 .products-table {
@@ -97,7 +97,7 @@
   font-size: 28px;
   font-weight: 700;
   margin-bottom: 32px;
-  color: var(--neon-pink);
+  color: var(--primary-green);
 }
 
 table {
@@ -113,7 +113,7 @@ th {
   padding: 16px;
   text-align: left;
   font-weight: 700;
-  color: var(--neon-cyan);
+  color: var(--primary-cyan);
   text-transform: uppercase;
   font-size: 12px;
   letter-spacing: 1px;
@@ -135,7 +135,7 @@ td {
 
 .status.active {
   background: rgba(127, 255, 0, 0.2);
-  color: var(--neon-lime);
+  color: var(--accent-lime);
 }
 
 .status.inactive {
@@ -160,12 +160,12 @@ td {
 
 .btn-edit {
   background: rgba(0, 217, 255, 0.15);
-  color: var(--neon-cyan);
-  border: 1px solid var(--neon-cyan);
+  color: var(--primary-cyan);
+  border: 1px solid var(--primary-cyan);
 }
 
 .btn-edit:hover {
-  background: var(--neon-cyan);
+  background: var(--primary-cyan);
   color: var(--bg-primary);
   box-shadow: 0 0 15px rgba(0, 217, 255, 0.3);
 }

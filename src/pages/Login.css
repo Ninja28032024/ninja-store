@@ -13,7 +13,7 @@
   max-width: 450px;
   width: 100%;
   border: 1px solid var(--border-subtle);
-  box-shadow: 0 8px 40px rgba(255, 110, 199, 0.15);
+  box-shadow: 0 8px 40px rgba(0, 255, 136, 0.15);
 }
 
 .login-title {
@@ -21,7 +21,7 @@
   font-size: 36px;
   font-weight: 900;
   margin-bottom: 32px;
-  background: linear-gradient(135deg, var(--neon-pink), var(--neon-cyan));
+  background: linear-gradient(135deg, var(--primary-green), var(--primary-cyan));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -60,7 +60,7 @@
 
 .form-group input:focus {
   outline: none;
-  border-color: var(--neon-cyan);
+  border-color: var(--primary-cyan);
   box-shadow: 0 0 15px rgba(0, 217, 255, 0.2);
   background: rgba(255, 255, 255, 0.08);
 }
@@ -85,7 +85,7 @@
 .toggle-button {
   background: none;
   border: none;
-  color: var(--neon-cyan);
+  color: var(--primary-cyan);
   font-weight: 600;
   cursor: pointer;
   margin-left: 8px;
@@ -95,7 +95,7 @@
 }
 
 .toggle-button:hover {
-  color: var(--neon-pink);
+  color: var(--primary-green);
   text-decoration: underline;
 }
 

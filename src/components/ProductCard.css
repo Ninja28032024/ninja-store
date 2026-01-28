@@ -11,7 +11,7 @@
 .product-card:hover {
   transform: translateY(-8px);
   border-color: var(--border-medium);
-  box-shadow: 0 8px 30px rgba(255, 110, 199, 0.2),
+  box-shadow: 0 8px 30px rgba(0, 255, 136, 0.2),
               0 0 20px rgba(0, 217, 255, 0.15);
 }
 
@@ -40,7 +40,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(255, 110, 199, 0.7), rgba(0, 217, 255, 0.7));
+  background: linear-gradient(135deg, rgba(0, 255, 136, 0.7), rgba(0, 217, 255, 0.7));
   display: flex;
   align-items: center;
   justify-content: center;
@@ -66,7 +66,7 @@
   font-weight: 700;
   color: var(--text-primary);
   margin-bottom: 12px;
-  text-shadow: 0 0 8px rgba(255, 110, 199, 0.2);
+  text-shadow: 0 0 8px rgba(0, 255, 136, 0.2);
 }
 
 .product-description {
@@ -89,7 +89,7 @@
 .product-price {
   font-size: 28px;
   font-weight: 800;
-  background: linear-gradient(135deg, var(--neon-pink), var(--neon-cyan));
+  background: linear-gradient(135deg, var(--primary-green), var(--primary-cyan));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -97,8 +97,8 @@
 
 .btn-buy {
   padding: 10px 20px;
-  background: linear-gradient(135deg, var(--neon-pink), var(--neon-cyan));
-  color: white;
+  background: linear-gradient(135deg, var(--primary-green), var(--primary-cyan));
+  color: var(--bg-primary);
   border: none;
   border-radius: 8px;
   font-weight: 600;
@@ -107,11 +107,11 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  box-shadow: 0 4px 12px rgba(255, 110, 199, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 255, 136, 0.2);
 }
 
 .btn-buy:hover {
-  box-shadow: 0 6px 20px rgba(255, 110, 199, 0.35);
+  box-shadow: 0 6px 20px rgba(0, 255, 136, 0.35);
   transform: scale(1.05);
 }
 

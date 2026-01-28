@@ -28,12 +28,12 @@
 }
 
 .logo-ninja {
-  color: var(--neon-pink);
-  text-shadow: 0 0 8px rgba(255, 110, 199, 0.3);
+  color: var(--primary-green);
+  text-shadow: 0 0 8px rgba(0, 255, 136, 0.3);
 }
 
 .logo-store {
-  color: var(--neon-cyan);
+  color: var(--primary-cyan);
   text-shadow: 0 0 8px rgba(0, 217, 255, 0.3);
 }
 
@@ -63,12 +63,12 @@
   left: 0;
   width: 0;
   height: 2px;
-  background: linear-gradient(90deg, var(--neon-pink), var(--neon-cyan));
+  background: linear-gradient(90deg, var(--primary-green), var(--primary-cyan));
   transition: width 0.3s ease;
 }
 
 .nav-link:hover {
-  color: var(--neon-cyan);
+  color: var(--primary-cyan);
 }
 
 .nav-link:hover::after {
@@ -78,16 +78,16 @@
 .btn-logout {
   padding: 8px 20px;
   border-radius: 6px;
-  border: 1px solid var(--neon-pink);
+  border: 1px solid var(--primary-green);
   background: transparent;
-  color: var(--neon-pink);
+  color: var(--primary-green);
   transition: all 0.3s ease;
 }
 
 .btn-logout:hover {
-  background: var(--neon-pink);
+  background: var(--primary-green);
   color: var(--bg-primary);
-  box-shadow: 0 0 15px rgba(255, 110, 199, 0.3);
+  box-shadow: 0 0 15px rgba(0, 255, 136, 0.3);
 }
 
 @media (max-width: 768px) {
