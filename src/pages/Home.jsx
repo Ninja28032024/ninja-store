@@ -6,10 +6,39 @@ import ProductCard from '../components/ProductCard';
 import './Home.css';
 
 const Home = () => {
-  const [products, setProducts] = useState([]);
-  const [loading, setLoading] = useState(true);
+  // Produtos mockados para demonstração
+  const mockProducts = [
+    {
+      id: '1',
+      name: 'E-book Premium',
+      description: 'Guia completo para iniciantes',
+      price: 49.90,
+      imageUrl: 'https://via.placeholder.com/300x200/ff00ff/ffffff?text=E-book',
+      active: true
+    },
+    {
+      id: '2',
+      name: 'Template Design',
+      description: 'Pack com 50 templates profissionais',
+      price: 79.90,
+      imageUrl: 'https://via.placeholder.com/300x200/00f3ff/ffffff?text=Templates',
+      active: true
+    },
+    {
+      id: '3',
+      name: 'Curso Online',
+      description: 'Acesso vitalício ao curso completo',
+      price: 149.90,
+      imageUrl: 'https://via.placeholder.com/300x200/39ff14/000000?text=Curso',
+      active: true
+    }
+  ];
+
+  const [products, setProducts] = useState(mockProducts);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
+    // Tentar buscar do Firebase, mas usar mock como fallback
     fetchProducts();
   }, []);
 
@@ -17,15 +46,16 @@ const Home = () => {
     try {
       const q = query(collection(db, 'products'), where('active', '==', true));
       const querySnapshot = await getDocs(q);
-      const productsData = querySnapshot.docs.map(doc => ({
-        id: doc.id,
-        ...doc.data()
-      }));
-      setProducts(productsData);
+      if (querySnapshot.docs.length > 0) {
+        const productsData = querySnapshot.docs.map(doc => ({
+          id: doc.id,
+          ...doc.data()
+        }));
+        setProducts(productsData);
+      }
     } catch (error) {
-      console.error('Erro ao buscar produtos:', error);
-    } finally {
-      setLoading(false);
+      console.log('Usando produtos mockados para demonstração');
+      // Manter produtos mockados em caso de erro
     }
   };
 
