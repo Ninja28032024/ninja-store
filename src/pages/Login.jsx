@@ -44,11 +44,9 @@ const Login = () => {
         console.log('Login realizado com sucesso');
       }
       
-      // Pequeno delay para garantir que o estado de autenticação foi atualizado
-      setTimeout(() => {
-        setLoading(false);
-        navigate('/');
-      }, 500);
+      // Navegar imediatamente após sucesso
+      setLoading(false);
+      navigate('/');
       
     } catch (error) {
       console.error('Erro de autenticação:', error);
