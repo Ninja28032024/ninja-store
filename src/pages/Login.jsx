@@ -21,23 +21,59 @@ const Login = () => {
     try {
       if (isSignUp) {
         // Criar nova conta
+        console.log('Criando conta para:', email);
         const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+        console.log('Conta criada com sucesso:', userCredential.user.uid);
+        
         // Criar documento do usuário no Firestore
-        await setDoc(doc(db, 'users', userCredential.user.uid), {
-          email: email,
-          isAdmin: false,
-          createdAt: new Date()
-        });
+        try {
+          await setDoc(doc(db, 'users', userCredential.user.uid), {
+            email: email,
+            isAdmin: false,
+            createdAt: new Date()
+          });
+          console.log('Documento do usuário criado no Firestore');
+        } catch (firestoreError) {
+          console.error('Erro ao criar documento no Firestore:', firestoreError);
+          // Continua mesmo se falhar ao criar o documento
+        }
       } else {
         // Login
+        console.log('Fazendo login para:', email);
         await signInWithEmailAndPassword(auth, email, password);
+        console.log('Login realizado com sucesso');
       }
-      navigate('/');
+      
+      // Pequeno delay para garantir que o estado de autenticação foi atualizado
+      setTimeout(() => {
+        setLoading(false);
+        navigate('/');
+      }, 500);
+      
     } catch (error) {
       console.error('Erro de autenticação:', error);
-      setError(error.message);
-    } finally {
       setLoading(false);
+      
+      // Mensagens de erro mais amigáveis
+      let errorMessage = 'Erro ao processar sua solicitação';
+      
+      if (error.code === 'auth/email-already-in-use') {
+        errorMessage = 'Este e-mail já está em uso';
+      } else if (error.code === 'auth/invalid-email') {
+        errorMessage = 'E-mail inválido';
+      } else if (error.code === 'auth/weak-password') {
+        errorMessage = 'A senha deve ter pelo menos 6 caracteres';
+      } else if (error.code === 'auth/user-not-found') {
+        errorMessage = 'Usuário não encontrado';
+      } else if (error.code === 'auth/wrong-password') {
+        errorMessage = 'Senha incorreta';
+      } else if (error.code === 'auth/invalid-credential') {
+        errorMessage = 'Credenciais inválidas';
+      } else {
+        errorMessage = error.message;
+      }
+      
+      setError(errorMessage);
     }
   };
 
@@ -57,6 +93,7 @@ const Login = () => {
               onChange={(e) => setEmail(e.target.value)}
               required
               placeholder="seu@email.com"
+              disabled={loading}
             />
           </div>
 
@@ -69,6 +106,7 @@ const Login = () => {
               required
               placeholder="••••••••"
               minLength="6"
+              disabled={loading}
             />
           </div>
 
@@ -82,8 +120,12 @@ const Login = () => {
         <p className="toggle-text">
           {isSignUp ? 'Já tem uma conta?' : 'Não tem uma conta?'}
           <button
-            onClick={() => setIsSignUp(!isSignUp)}
+            onClick={() => {
+              setIsSignUp(!isSignUp);
+              setError('');
+            }}
             className="toggle-button"
+            disabled={loading}
           >
             {isSignUp ? 'Fazer Login' : 'Criar Conta'}
           </button>
